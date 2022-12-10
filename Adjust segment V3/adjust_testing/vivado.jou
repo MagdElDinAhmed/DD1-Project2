@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Dec  8 16:13:41 2022
+# Process ID: 28004
+# Current directory: C:/Users/MagdElDin/Documents/adjust_testing
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2576 C:\Users\MagdElDin\Documents\adjust_testing\adjust_testing.xpr
+# Log file: C:/Users/MagdElDin/Documents/adjust_testing/vivado.log
+# Journal file: C:/Users/MagdElDin/Documents/adjust_testing\vivado.jou
+# Running On: CSE-P07-2165-51, OS: Windows, CPU Frequency: 3492 MHz, CPU Physical cores: 6, Host memory: 34278 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.xpr
+update_compile_order -fileset sources_1
+set_property target_constrs_file C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/constrs_1/new/top_const.xdc [current_fileset -constrset]
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
