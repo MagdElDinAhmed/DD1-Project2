@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-10T13:17:57.968Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="csrIu-Z9o79NK7dcq5sO" version="20.6.0" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2022-12-10T14:03:02.754Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="zsflVi08rQq5rkiUdXMU" version="20.6.0" type="github" pages="7">
   <diagram id="L6IGqSFNvoj9cD-TAHoM" name="Clock">
     <mxGraphModel dx="782" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -4309,7 +4309,7 @@
           <mxGeometry x="530" y="490" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="bKg_K4xESs3igJFAIu3o-56" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Depends on value of AH_temp/ AJH_temp&lt;br&gt;&lt;br&gt;We start from state 0, and as the value of AH_temp/ AJH_temp increases by 1, so does the counter. When the value of AH_temp/ AJH_temp = 24, the counter goes from 23 to 24.&lt;br&gt;&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="330" y="310" width="480" height="30" as="geometry" />
+          <mxGeometry x="250" y="310" width="590" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
