@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Dec  8 20:27:29 2022
-# Process ID: 6600
+# Start of session at: Fri Dec  9 18:44:26 2022
+# Process ID: 2272
 # Current directory: C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.runs/impl_1
 # Command line: vivado.exe -log Alarm_Clock.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Alarm_Clock.tcl -notrace
 # Log file: C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.runs/impl_1/Alarm_Clock.vdi

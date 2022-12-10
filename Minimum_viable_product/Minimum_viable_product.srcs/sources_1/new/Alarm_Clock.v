@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, output LD0, LD12, LD13, LD14, LD15,
+module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, output LD0, LD12, LD13, LD14, LD15, DP, alarm_signal,
     output [3:0] anodes
     );
     parameter [1:0] Clock=2'b00,
@@ -37,6 +37,14 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    //Wire for mode
    wire mode;
    
+   //wire for alarm signal
+   wire alarm_signal;
+   
+   //wire to indicate if the alarm was already turned off
+   reg already_turned_off;
+   
+   //wire for DP circuit counting
+   wire [4:0] DP_count;
    
    //Wire for Number to be output on the display
    reg [3:0] Num_Out;
@@ -58,7 +66,7 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    PushButton B3 (BTNR, One_Hundred_Hz, INR);
    PushButton B4 (BTND, One_Hundred_Hz, IND);
    PushButton B5 (BTNU, One_Hundred_Hz, INU);
-   
+   wire INC2;
    //Clock dividers
    ClockDivider #(500000) One_Hundred_Hz_Divider (clk,rst,One_Hundred_Hz);
    ClockDivider #(5000000) One_Hz_Divider (clk,rst,One_Hz);
@@ -70,10 +78,13 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    //Adjust Circuit
    Adjust adjust_me (One_Hundred_Hz,rst, mode, INL,INR,INU,IND,ATH, AH, ATM, AM, AJTH, AJH, AJTM, AJM,LD12, LD13, LD14, LD15, selected_adjust);
    //module Clock_Circuit(input clk, INC2, Mode, input [3:0] AJTH, AJH, AJTM, AJM, output [3:0] CTH, CH, CTM, CM);
-   Clock_Circuit cl(One_Hz, INC2,state, AJTH, AJH, AJTM, AJM, CTH, CH, CTM, CM);
+   Clock_Circuit cl(One_Hz, rst, INC,mode, AJTH, AJH, AJTM, AJM, CTH, CH, CTM, CM);
    
    //Alarm Circuit
    alarm alarms (One_Hz, rst, alarm_enable,alarm_signal);
+   
+   //DP counter circuit
+   X_Bit_Counter #(5,25) DP_Enabler (One_Hundred_Hz,rst,(select_out==2'b10),1'b0,DP_count);
    
    always @(select_out) begin
    case (select_out)
@@ -87,11 +98,15 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    if (selected_adjust[1]==0) Num_Out = ATM; else Num_Out = AJTM;
    end
    else Num_Out = CTM;
-   2'b10: 
+   2'b10: //DP enable goes here
+   begin
+   
    if (mode) begin
    if (selected_adjust[1]==0) Num_Out = AH; else Num_Out = AJH;
    end
    else Num_Out = CH;
+   
+   end
    2'b11:
    if (mode) begin 
    if (selected_adjust[1]==0) Num_Out = ATH; else Num_Out = AJTH;
@@ -105,10 +120,20 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    always @(state,INC, INL, INR, IND, INU) begin
    case (state)
    Adjust: if (INC) NextState = Clock; else NextState = Adjust;
-   Clock: if ( (ATH==CTH) && (AH==CH) && (ATM == CTM) && (AM == CM) ) NextState = Alarm;
+   Clock: if ( (ATH==CTH) && (AH==CH) && (ATM == CTM) && (AM == CM) && !already_turned_off ) NextState = Alarm;
    else if (INC) NextState = Adjust;
-   else NextState = Clock;
-   Alarm: if (INC || INL || INR || INU || IND) NextState = Clock; else NextState = Alarm;
+   else if ( (ATH!=CTH) || (AH!=CH) || (ATM != CTM) || (AM != CM)) begin 
+   already_turned_off = 1'b0;
+   NextState = Clock;
+   end
+   else begin 
+   NextState = Clock;
+   end
+   Alarm: if (INC || INL || INR || INU || IND) begin
+    NextState = Clock;
+    already_turned_off = 1'b1;
+    end
+    else NextState = Alarm;
    default: NextState = Clock;
    endcase
    end
@@ -123,6 +148,6 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    assign alarm_enable = state==Alarm;
    assign LD0 = (state==Adjust) || (alarm_signal);
    assign mode = (state==Adjust);
-   
+   assign DP = !(DP_count<12 && select_out==2'b10 && !mode);
    
 endmodule

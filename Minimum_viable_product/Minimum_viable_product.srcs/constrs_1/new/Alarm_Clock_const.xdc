@@ -16,6 +16,8 @@ set_property PACKAGE_PIN V5 [get_ports seg[1]]
 set_property IOSTANDARD LVCMOS33 [get_ports seg[1]]
 set_property PACKAGE_PIN U7 [get_ports seg[0]]
 set_property IOSTANDARD LVCMOS33 [get_ports seg[0]]
+set_property PACKAGE_PIN V7 [get_ports DP]
+set_property IOSTANDARD LVCMOS33 [get_ports DP]
 
 
 set_property PACKAGE_PIN U2 [get_ports anodes[0]]
@@ -48,3 +50,6 @@ set_property PACKAGE_PIN P1 [get_ports LD14]
 set_property IOSTANDARD LVCMOS33 [get_ports LD14]
 set_property PACKAGE_PIN L1 [get_ports LD15]
 set_property IOSTANDARD LVCMOS33 [get_ports LD15]
+
+set_property PACKAGE_PIN B16 [get_ports alarm_signal]
+set_property IOSTANDARD LVCMOS33 [get_ports alarm_signal]

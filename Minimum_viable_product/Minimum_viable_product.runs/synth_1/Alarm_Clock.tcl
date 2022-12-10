@@ -99,7 +99,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/MagdElDin/alarm_test/alarm_test.srcs/sources_1/new/alarm.v
   C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/debouncer.v
   C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/decoder4x7p.v
-  C:/Users/MagdElDin/clock_test/clock_test.srcs/sources_1/imports/new/mux2_1.v
   C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/synchronizer.v
   C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v
 }
