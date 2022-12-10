@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Dec  9 18:45:35 2022
+| Date         : Fri Dec  9 19:07:11 2022
 | Host         : CSE-P07-2165-51 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Alarm_Clock_methodology_drc_routed.rpt -pb Alarm_Clock_methodology_drc_routed.pb -rpx Alarm_Clock_methodology_drc_routed.rpx
 | Design       : Alarm_Clock
@@ -1207,72 +1207,72 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch already_turned_off_reg cannot be properly analyzed as its control pin already_turned_off_reg/G is not reached by a timing clock
+The latch cl/c2/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch cl/c2/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[0]_LDC/G is not reached by a timing clock
+The latch cl/c2/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch cl/c2/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[1]_LDC/G is not reached by a timing clock
+The latch cl/c2/count_reg[2]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch cl/c2/count_reg[2]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[2]_LDC/G is not reached by a timing clock
+The latch cl/c2/count_reg[3]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[3]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch cl/c2/count_reg[3]_LDC cannot be properly analyzed as its control pin cl/c2/count_reg[3]_LDC/G is not reached by a timing clock
+The latch cl/c3/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c3/count_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch cl/c3/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c3/count_reg[0]_LDC/G is not reached by a timing clock
+The latch cl/c3/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c3/count_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch cl/c3/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c3/count_reg[1]_LDC/G is not reached by a timing clock
+The latch cl/c3/count_reg[2]_LDC cannot be properly analyzed as its control pin cl/c3/count_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch cl/c3/count_reg[2]_LDC cannot be properly analyzed as its control pin cl/c3/count_reg[2]_LDC/G is not reached by a timing clock
+The latch cl/c4/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch cl/c4/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[0]_LDC/G is not reached by a timing clock
+The latch cl/c4/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch cl/c4/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[1]_LDC/G is not reached by a timing clock
+The latch cl/c4/count_reg[2]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch cl/c4/count_reg[2]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[2]_LDC/G is not reached by a timing clock
+The latch cl/c4/count_reg[3]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[3]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch cl/c4/count_reg[3]_LDC cannot be properly analyzed as its control pin cl/c4/count_reg[3]_LDC/G is not reached by a timing clock
+The latch cl/c5/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c5/count_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch cl/c5/count_reg[0]_LDC cannot be properly analyzed as its control pin cl/c5/count_reg[0]_LDC/G is not reached by a timing clock
+The latch cl/c5/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c5/count_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch cl/c5/count_reg[1]_LDC cannot be properly analyzed as its control pin cl/c5/count_reg[1]_LDC/G is not reached by a timing clock
+The latch not_turned_on_reg cannot be properly analyzed as its control pin not_turned_on_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory

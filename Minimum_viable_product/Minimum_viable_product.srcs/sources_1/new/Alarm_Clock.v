@@ -41,7 +41,7 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    wire alarm_signal;
    
    //wire to indicate if the alarm was already turned off
-   reg already_turned_off;
+   reg not_turned_on;
    
    //wire for DP circuit counting
    wire [4:0] DP_count;
@@ -90,26 +90,26 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    case (select_out)
    2'b00: 
    if (mode) begin
-   if (selected_adjust[1]==0) Num_Out = AM; else Num_Out = AJM;
+   if (selected_adjust[1]==0) Num_Out = AJM; else Num_Out = AM;
    end
    else Num_Out = CM;
    2'b01: 
    if (mode) begin
-   if (selected_adjust[1]==0) Num_Out = ATM; else Num_Out = AJTM;
+   if (selected_adjust[1]==0) Num_Out = AJTM; else Num_Out = ATM;
    end
    else Num_Out = CTM;
    2'b10: //DP enable goes here
    begin
    
    if (mode) begin
-   if (selected_adjust[1]==0) Num_Out = AH; else Num_Out = AJH;
+   if (selected_adjust[1]==0) Num_Out = AJH; else Num_Out = AH;
    end
    else Num_Out = CH;
    
    end
    2'b11:
    if (mode) begin 
-   if (selected_adjust[1]==0) Num_Out = ATH; else Num_Out = AJTH;
+   if (selected_adjust[1]==0) Num_Out = AJTH; else Num_Out = ATH;
    end
    else Num_Out = CTH;
    
@@ -120,18 +120,19 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    always @(state,INC, INL, INR, IND, INU) begin
    case (state)
    Adjust: if (INC) NextState = Clock; else NextState = Adjust;
-   Clock: if ( (ATH==CTH) && (AH==CH) && (ATM == CTM) && (AM == CM) && !already_turned_off ) NextState = Alarm;
+   Clock: if ( (ATH==CTH) && (AH==CH) && (ATM == CTM) && (AM == CM) && not_turned_on ) NextState = Alarm;
    else if (INC) NextState = Adjust;
    else if ( (ATH!=CTH) || (AH!=CH) || (ATM != CTM) || (AM != CM)) begin 
-   already_turned_off = 1'b0;
+   not_turned_on = 1'b1;
    NextState = Clock;
    end
    else begin 
    NextState = Clock;
    end
    Alarm: if (INC || INL || INR || INU || IND) begin
+    not_turned_on = 1'b0;
     NextState = Clock;
-    already_turned_off = 1'b1;
+    
     end
     else NextState = Alarm;
    default: NextState = Clock;

@@ -28,19 +28,19 @@ wire [4:0] AH_temp;
 wire [4:0] AJH_temp;
 
 //wires for enabling adjusting alarm hours
-wire enable_alarm_hours; assign enable_alarm_hours = en&&(selected_adjust==2'b00);
+wire enable_alarm_hours; assign enable_alarm_hours = en&&(selected_adjust==2'b10);
 wire enable_ten_alarm_hours; assign enable_ten_alarm_hours = (enable_alarm_hours && AH==9);
 
 //wires for enabling adjusting alarm minutes
-wire enable_alarm_minutes; assign enable_alarm_minutes = en&&(selected_adjust==2'b01);
+wire enable_alarm_minutes; assign enable_alarm_minutes = en&&(selected_adjust==2'b11);
 wire enable_ten_alarm_minutes; assign enable_ten_alarm_minutes = (enable_alarm_minutes && AM==9);
 
 //wires for enabling adjusting clock hours
-wire enable_clock_hours; assign enable_clock_hours = en&(selected_adjust==2'b10);
+wire enable_clock_hours; assign enable_clock_hours = en&(selected_adjust==2'b00);
 wire enable_ten_clock_hours; assign enable_ten_clock_hours = (enable_clock_hours && AJH==9);
 
 //wires for enabling adjusting clock minutes
-wire enable_clock_minutes; assign enable_clock_minutes = en&(selected_adjust==2'b11);
+wire enable_clock_minutes; assign enable_clock_minutes = en&(selected_adjust==2'b01);
 wire enable_ten_clock_minutes; assign enable_ten_clock_minutes = (enable_clock_minutes && AJM==9);
 
 //X_Bit_Counter to select between adjusting alarm hour, alarm minute, clock hour and clock minute

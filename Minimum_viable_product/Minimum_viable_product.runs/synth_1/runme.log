@@ -10,7 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source Alarm_Clock.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1285.969 ; gain = 0.000
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1285.875 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/utils_1/imports/synth_1/Alarm_Clock.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/utils_1/imports/synth_1/Alarm_Clock.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -23,7 +23,7 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8268
+INFO: [Synth 8-7075] Helper process launched with PID 6248
 WARNING: [Synth 8-9971] redeclaration of ansi port 'selected_adjust' is not allowed [C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/Adjust.v:22]
 WARNING: [Synth 8-9971] redeclaration of ansi port 'ATM' is not allowed [C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/Adjust.v:23]
 WARNING: [Synth 8-9971] redeclaration of ansi port 'AM' is not allowed [C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/Adjust.v:23]
@@ -44,7 +44,7 @@ WARNING: [Synth 8-9971] redeclaration of ansi port 'LD15' is not allowed [C:/Use
 WARNING: [Synth 8-9971] redeclaration of ansi port 'alarm_signal' is not allowed [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:41]
 WARNING: [Synth 8-8895] 'INC2' is already implicitly declared on line 64 [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:69]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1285.969 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1285.875 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Alarm_Clock' [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:23]
 INFO: [Synth 8-6157] synthesizing module 'PushButton' [C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/PushButton.v:6]
@@ -98,17 +98,17 @@ INFO: [Synth 8-6157] synthesizing module 'X_Bit_Counter__parameterized3' [C:/Use
 INFO: [Synth 8-6155] done synthesizing module 'X_Bit_Counter__parameterized3' (0#1) [C:/Users/MagdElDin/Documents/adjust_testing/adjust_testing.srcs/sources_1/new/X_Bit_Counter.v:6]
 WARNING: [Synth 8-567] referenced signal 'mode' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'selected_adjust' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
-WARNING: [Synth 8-567] referenced signal 'AM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'AJM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
+WARNING: [Synth 8-567] referenced signal 'AM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'CM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
-WARNING: [Synth 8-567] referenced signal 'ATM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'AJTM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
+WARNING: [Synth 8-567] referenced signal 'ATM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'CTM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
-WARNING: [Synth 8-567] referenced signal 'AH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'AJH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
+WARNING: [Synth 8-567] referenced signal 'AH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'CH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
-WARNING: [Synth 8-567] referenced signal 'ATH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'AJTH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
+WARNING: [Synth 8-567] referenced signal 'ATH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'CTH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:89]
 WARNING: [Synth 8-567] referenced signal 'ATH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:120]
 WARNING: [Synth 8-567] referenced signal 'CTH' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:120]
@@ -120,18 +120,18 @@ WARNING: [Synth 8-567] referenced signal 'AM' should be on the sensitivity list 
 WARNING: [Synth 8-567] referenced signal 'CM' should be on the sensitivity list [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:120]
 INFO: [Synth 8-6155] done synthesizing module 'Alarm_Clock' (0#1) [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.969 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.875 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.969 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.875 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.969 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.875 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1285.969 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1285.875 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -142,28 +142,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Alarm_Clock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1347.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1347.590 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1351.000 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'RisingEdgeDetector'
 ---------------------------------------------------------------------------------------------------
@@ -174,9 +174,9 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Risin
                        C |                               10 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'RisingEdgeDetector'
-WARNING: [Synth 8-327] inferring latch for variable 'already_turned_off_reg' [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:123]
+WARNING: [Synth 8-327] inferring latch for variable 'not_turned_on_reg' [C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.srcs/sources_1/new/Alarm_Clock.v:123]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -225,7 +225,7 @@ WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3332] Sequential element (B1a/risingedge/FSM_sequential_state_reg[1]) is unused and will be removed from module Alarm_Clock.
 WARNING: [Synth 8-3332] Sequential element (B1a/risingedge/FSM_sequential_state_reg[0]) is unused and will be removed from module Alarm_Clock.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -252,13 +252,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -266,7 +266,7 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (cl/c3/count_reg[3]_LDC) is unused and will be removed from module Alarm_Clock.
 WARNING: [Synth 8-3332] Sequential element (cl/c3/count_reg[3]_P) is unused and will be removed from module Alarm_Clock.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -284,37 +284,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -337,7 +337,7 @@ Report Cell Usage:
 |5     |LUT3   |    38|
 |6     |LUT4   |    52|
 |7     |LUT5   |   131|
-|8     |LUT6   |   100|
+|8     |LUT6   |    99|
 |9     |FDCE   |   158|
 |10    |FDPE   |    13|
 |11    |FDRE   |    36|
@@ -347,28 +347,28 @@ Report Cell Usage:
 |15    |OBUF   |    18|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1347.590 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1347.590 ; gain = 61.621
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1351.000 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1351.000 ; gain = 65.125
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1347.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1351.000 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1347.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   LD => LDCE: 1 instance 
   LDC => LDCE: 13 instances
 
-Synth Design complete, checksum: 7760f2d9
+Synth Design complete, checksum: 7954ef02
 INFO: [Common 17-83] Releasing license: Synthesis
 61 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1347.590 ; gain = 61.621
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1351.000 ; gain = 65.125
 INFO: [Common 17-1381] The checkpoint 'C:/Users/MagdElDin/Minimum_viable_product/Minimum_viable_product.runs/synth_1/Alarm_Clock.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Alarm_Clock_utilization_synth.rpt -pb Alarm_Clock_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Dec  9 18:44:17 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  9 19:06:01 2022...

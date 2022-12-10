@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Dec  9 18:44:56 2022
+| Date         : Fri Dec  9 19:06:40 2022
 | Host         : CSE-P07-2165-51 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Alarm_Clock_drc_opted.rpt -pb Alarm_Clock_drc_opted.pb -rpx Alarm_Clock_drc_opted.rpx
 | Design       : Alarm_Clock

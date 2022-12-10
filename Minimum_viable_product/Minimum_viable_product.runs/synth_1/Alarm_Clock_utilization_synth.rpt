@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Dec  9 18:44:17 2022
+| Date         : Fri Dec  9 19:06:01 2022
 | Host         : CSE-P07-2165-51 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Alarm_Clock_utilization_synth.rpt -pb Alarm_Clock_utilization_synth.pb
 | Design       : Alarm_Clock
@@ -152,7 +152,7 @@ Table of Contents
 +----------+------+---------------------+
 | FDCE     |  158 |        Flop & Latch |
 | LUT5     |  131 |                 LUT |
-| LUT6     |  100 |                 LUT |
+| LUT6     |   99 |                 LUT |
 | LUT4     |   52 |                 LUT |
 | LUT3     |   38 |                 LUT |
 | FDRE     |   36 |        Flop & Latch |

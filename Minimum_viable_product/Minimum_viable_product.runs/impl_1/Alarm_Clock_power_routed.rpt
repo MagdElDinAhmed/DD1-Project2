@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Fri Dec  9 18:45:36 2022
+| Date             : Fri Dec  9 19:07:19 2022
 | Host             : CSE-P07-2165-51 running 64-bit major release  (build 9200)
 | Command          : report_power -file Alarm_Clock_power_routed.rpt -pb Alarm_Clock_power_summary_routed.pb -rpx Alarm_Clock_power_routed.rpx
 | Design           : Alarm_Clock
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 38.638 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 32.600 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 38.152                           |
+| Dynamic (W)              | 32.114                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.001 |      641 |       --- |             --- |
-|   LUT as Logic |     0.875 |      293 |     20800 |            1.41 |
-|   Register     |     0.063 |      221 |     41600 |            0.53 |
+| Slice Logic    |     1.017 |      640 |       --- |             --- |
+|   LUT as Logic |     0.892 |      293 |     20800 |            1.41 |
+|   Register     |     0.062 |      221 |     41600 |            0.53 |
 |   CARRY4       |     0.057 |       24 |      8150 |            0.29 |
 |   BUFG         |     0.006 |        3 |        32 |            9.38 |
 |   Others       |     0.000 |       54 |       --- |             --- |
-| Signals        |     1.200 |      509 |       --- |             --- |
-| I/O            |    35.951 |       25 |       106 |           23.58 |
+| Signals        |     1.125 |      508 |       --- |             --- |
+| I/O            |    29.971 |       25 |       106 |           23.58 |
 | Static Power   |     0.486 |          |           |                 |
-| Total          |    38.638 |          |           |                 |
+| Total          |    32.600 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     2.566 |       2.225 |      0.341 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     1.370 |       1.317 |      0.053 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |    10.170 |      10.169 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     2.507 |       2.167 |      0.341 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     1.151 |       1.097 |      0.053 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     8.477 |       8.476 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,28 +138,27 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| Alarm_Clock                 |    38.152 |
-|   DP_Enabler                |     0.042 |
-|   One_Hundred_Hz_Divider    |     0.289 |
-|   One_Hz_Divider            |     0.289 |
-|   adjust_me                 |     0.453 |
-|     Adjust_Alarm_Hour       |     0.012 |
-|     Adjust_Alarm_Minute     |     0.011 |
-|     Adjust_Alarm_Ten_Minute |     0.035 |
-|     Adjust_Clock_Hour       |     0.389 |
-|     Adjust_Clock_Minute     |     0.002 |
-|     Adjust_Clock_Ten_Minute |     0.004 |
-|   alarms                    |     0.095 |
-|   cl                        |     0.459 |
+| Alarm_Clock                 |    32.114 |
+|   DP_Enabler                |     0.031 |
+|   One_Hundred_Hz_Divider    |     0.293 |
+|   One_Hz_Divider            |     0.286 |
+|   adjust_me                 |     0.480 |
+|     Adjust_Alarm_Hour       |     0.427 |
+|     Adjust_Alarm_Minute     |     0.002 |
+|     Adjust_Alarm_Ten_Minute |     0.003 |
+|     Adjust_Clock_Hour       |     0.007 |
+|     Adjust_Clock_Minute     |     0.005 |
+|     Adjust_Clock_Ten_Minute |     0.037 |
+|   cl                        |     0.414 |
 |     c0                      |     0.089 |
 |     c1                      |     0.009 |
-|     c2                      |     0.082 |
-|     c3                      |     0.134 |
-|     c4                      |     0.090 |
-|     c5                      |     0.055 |
-|   select_counter            |     0.536 |
-|     DUT                     |     0.237 |
-|     DUUT                    |     0.299 |
+|     c2                      |     0.072 |
+|     c3                      |     0.103 |
+|     c4                      |     0.098 |
+|     c5                      |     0.043 |
+|   select_counter            |     0.601 |
+|     DUT                     |     0.293 |
+|     DUUT                    |     0.308 |
 +-----------------------------+-----------+
 
 
