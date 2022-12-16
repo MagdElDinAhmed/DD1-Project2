@@ -1,0 +1,124 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Mon Dec 12 11:06:27 2022
+| Host         : CSE-P07-216886 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Alarm_Clock_control_sets_placed.rpt
+| Design       : Alarm_Clock
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    46 |
+|    Minimum number of control sets                        |    46 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   284 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    46 |
+| >= 0 to < 4        |    35 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              37 |           16 |
+| No           | No                    | Yes                    |             122 |           60 |
+| No           | Yes                   | No                     |              10 |           10 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              43 |           20 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------+----------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                 |                    Enable Signal                   |                 Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------------+----------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|  B1/risingedge/state_reg[0]                   |                                                    |                                                 |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_10 |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg   |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_3  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_2   |                1 |              1 |         1.00 |
+|  One_Hundred_Hz_BUFG                          |                                                    | adjust_me/adjust_flag_i_2_n_0                   |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_2  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_3   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c1/count_reg[0]_0                               | B1/risingedge/FSM_sequential_state_reg[1]_10    |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_1  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_4   |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_6  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg     |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_5  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_0   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    |                                                 |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_4  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_1   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg_0 |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg_1 |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg_2 |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_3   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_1   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_0   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_2   |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  |                                                    | adjust_me/Adjust_Clock_Hour/adjust_flag_reg_4   |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_7  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg_2 |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c1/count_reg[0]_0                               | B1/risingedge/FSM_sequential_state_reg[1]_8     |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_9  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg_0 |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c1/count_reg[0]_0                               | B1/risingedge/FSM_sequential_state_reg[1]_9     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c1/count_reg[0]_0                               | B1/risingedge/FSM_sequential_state_reg[1]_7     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c3/count_reg[1]_1                               | B1/risingedge/FSM_sequential_state_reg[1]_3     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c3/count_reg[1]_1                               | B1/risingedge/FSM_sequential_state_reg[1]_6     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c3/count_reg[1]_1                               | B1/risingedge/FSM_sequential_state_reg[1]_5     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c3/count_reg[1]_1                               | B1/risingedge/FSM_sequential_state_reg[1]_4     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c4/count[3]_i_3_0                               | B1/risingedge/FSM_sequential_state_reg[1]_2     |                1 |              1 |         1.00 |
+|  One_Hz_BUFG                                  | cl/c4/count[3]_i_3_0                               | B1/risingedge/FSM_sequential_state_reg[1]_1     |                1 |              1 |         1.00 |
+|  B1/risingedge/FSM_sequential_state_reg[1]_8  |                                                    | adjust_me/Adjust_Clock_Minute/adjust_flag_reg_1 |                1 |              1 |         1.00 |
+|  select_counter/DUUT/CLK                      |                                                    | rst_IBUF                                        |                1 |              2 |         2.00 |
+|  One_Hz_BUFG                                  | cl/c4/count[3]_i_3_0                               | cl/c5/adjust_flag_reg                           |                1 |              2 |         2.00 |
+|  One_Hundred_Hz_BUFG                          | B4/risingedge/FSM_onehot_selected_adjust_reg[0][0] | rst_IBUF                                        |                1 |              4 |         4.00 |
+|  One_Hundred_Hz_BUFG                          | B4/risingedge/FSM_onehot_selected_adjust_reg[3][0] | rst_IBUF                                        |                2 |              4 |         2.00 |
+|  One_Hz_BUFG                                  | cl/c0/count_reg[1]_0                               | rst_IBUF                                        |                1 |              4 |         4.00 |
+|  One_Hz_BUFG                                  | cl/c3/count[3]_i_1_n_0                             | cl/c5/adjust_flag_reg                           |                1 |              4 |         4.00 |
+|  One_Hz_BUFG                                  |                                                    | rst_IBUF                                        |                1 |              4 |         4.00 |
+|  One_Hundred_Hz_BUFG                          | select_counter/DUT/E[0]                            | rst_IBUF                                        |                1 |              5 |         5.00 |
+|  One_Hundred_Hz_BUFG                          | B4/risingedge/E[0]                                 | rst_IBUF                                        |                2 |              5 |         2.50 |
+|  One_Hundred_Hz_BUFG                          | B4/risingedge/FSM_onehot_selected_adjust_reg[2][0] | rst_IBUF                                        |                1 |              5 |         5.00 |
+|  One_Hundred_Hz_BUFG                          |                                                    | rst_IBUF                                        |                2 |              6 |         3.00 |
+|  One_Hundred_Hz_BUFG                          |                                                    |                                                 |               14 |             35 |         2.50 |
+|  clk_IBUF_BUFG                                |                                                    | rst_IBUF                                        |               45 |             99 |         2.20 |
++-----------------------------------------------+----------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+
+
