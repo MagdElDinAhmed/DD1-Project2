@@ -1,1 +1,17 @@
+Authors: Basmala AbdelKader, MagdElDin AbdalRaaof, Mohamed Elshemy
+This Github repository is dedicated to our Digital Design 1 project
+The project is to create a digital alarm clock using Verliog code to run on an FPGA Basys 3 board
 
+How to use:
+The center button is used to switch between clock mode to dispaly the time and adjust mode to adjust the clock time and the alarm time
+
+The left and right buttons are used to change which part of the time is adjusted: 
+If LD15 lights up, you're adjusting the clock hour
+If LD14 lights up, you're adjusting the clock minutes
+If LD13 lights up, you're adjusting the alarm hours
+If LD12 lights up, you're adjusting the alarm minutes
+
+The up and down buttons are used to increment or decrement the value being adjusted
+
+If the clock reaches the time set for the alarm, LD0 blinks and the buzzer makes a beeping sound
+Pressing any button diables the alarm
