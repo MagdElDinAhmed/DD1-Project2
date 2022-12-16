@@ -52,7 +52,7 @@ module Alarm_Clock(input BTNC,BTNL,BTNR,BTND,BTNU,rst,clk, output [6:0]seg, outp
    wire INC2;
    //Clock dividers
    ClockDivider #(500000) One_Hundred_Hz_Divider (clk,rst,One_Hundred_Hz);
-   ClockDivider #(5000000) One_Hz_Divider (clk,rst,One_Hz);
+   ClockDivider One_Hz_Divider (clk,rst,One_Hz);
    
    //Counter to select the output to the 7 segment display
    SelectCounter select_counter (clk,rst,1,select_out);
