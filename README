@@ -15,3 +15,7 @@ The up and down buttons are used to increment or decrement the value being adjus
 
 If the clock reaches the time set for the alarm, LD0 blinks and the buzzer makes a beeping sound
 Pressing any button diables the alarm
+
+
+Note: reason most commits are done by MagdElDin AbdalRaaof is because we were working on one device, therefore only one person was really able to
+upload the work on Github
