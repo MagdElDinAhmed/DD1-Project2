@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Dec 12 11:05:10 2022
+# Process ID: 11088
+# Current directory: C:/Users/MagdElDin/project_v2/project_v2.runs/synth_1
+# Command line: vivado.exe -log Alarm_Clock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Alarm_Clock.tcl
+# Log file: C:/Users/MagdElDin/project_v2/project_v2.runs/synth_1/Alarm_Clock.vds
+# Journal file: C:/Users/MagdElDin/project_v2/project_v2.runs/synth_1\vivado.jou
+# Running On: CSE-P07-216886, OS: Windows, CPU Frequency: 3696 MHz, CPU Physical cores: 8, Host memory: 34020 MB
+#-----------------------------------------------------------
+source Alarm_Clock.tcl -notrace
