@@ -188,7 +188,7 @@ end
 
 //X_Bit_Counters to change the alarm minute
 X_Bit_Counter #(4,10) Adjust_Alarm_Minute (clk,rst ,enable_alarm_minutes,IND,AM);
-X_Bit_Counter #(4,6) Adjust_Alarm_Ten_Minute (clk,rst , enable_alarm_ten_minutes,IND,ATM);
+X_Bit_Counter #(4,6) Adjust_Alarm_Ten_Minute (clk,rst , enable_alarm_minutes && ((AM==9 && INU)|| (AM==0 && IND)) ,IND,ATM);
 
 //X_Bit_Counter to change the clock hour
 
@@ -302,5 +302,5 @@ end
 
 //X_Bit_Counters to change the clock minute
 X_Bit_Counter #(4,10) Adjust_Clock_Minute (clk,rst ,enable_clock_minutes,IND,AJM);
-X_Bit_Counter #(4,6) Adjust_Clock_Ten_Minute (clk,rst ,enable_clock_ten_minutes,IND,AJTM);
+X_Bit_Counter #(4,6) Adjust_Clock_Ten_Minute (clk,rst ,enable_clock_minutes && ((AJM==9 && INU) || (AJM==0 && IND)),IND,AJTM);
 endmodule
